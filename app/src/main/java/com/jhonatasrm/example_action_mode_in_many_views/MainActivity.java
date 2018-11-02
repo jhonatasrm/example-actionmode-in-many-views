@@ -25,12 +25,14 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         setContentView( R.layout.activity_main );
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        adapter.add("Rice");
-        adapter.add("Beans");
         adapter.add("Apple");
-        adapter.add("Potato");
-        adapter.add("Tomato");
+        adapter.add("Avocado");
+        adapter.add("Banana");
+        adapter.add("Cherry");
+        adapter.add("Lemon");
         adapter.add("Pineapple");
+        adapter.add("Grape");
+        adapter.add("Pumpkin");
 
         setListAdapter(adapter);
         listView = getListView();
