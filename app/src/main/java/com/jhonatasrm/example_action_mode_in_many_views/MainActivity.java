@@ -28,8 +28,6 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         adapter.add("Apple");
         adapter.add("Avocado");
         adapter.add("Banana");
-        adapter.add("Cherry");
-        adapter.add("Lemon");
         adapter.add("Pineapple");
         adapter.add("Grape");
         adapter.add("Pumpkin");
