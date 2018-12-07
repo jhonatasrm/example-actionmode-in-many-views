@@ -31,6 +31,13 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         adapter.add("Pineapple");
         adapter.add("Grape");
         adapter.add("Pumpkin");
+        adapter.add("Apple 2”);
+        adapter.add("Avocado 2”);
+        adapter.add("Banana 2”);
+        adapter.add("Pineapple 2”);
+        adapter.add("Grape 2”);
+        adapter.add("Pumpkin 2”);
+
 
         setListAdapter(adapter);
         listView = getListView();
