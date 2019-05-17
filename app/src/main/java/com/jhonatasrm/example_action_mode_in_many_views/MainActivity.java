@@ -23,7 +23,8 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
-
+        
+        // criado o ArrayAdapter e após isso adicionando elementos ao Array
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         adapter.add("Apple");
         adapter.add("Avocado");
@@ -38,13 +39,14 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         adapter.add("Grape 2”);
         adapter.add("Pumpkin 2”);
 
-
+        // definindo a lista de adapter sendo o adapter criado
         setListAdapter(adapter);
         listView = getListView();
         listView.setMultiChoiceModeListener(this);
         listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
     }
 
+    // verifica a mudança de estado de um item
     @Override
     public void onItemCheckedStateChanged(ActionMode actionMode, int position, long id, boolean checked) {
         String s = adapter.getItem(position);
@@ -59,6 +61,7 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         }
     }
 
+    // chama o método inflater para apresentar as opções de menu criadas previamente
     @Override
     public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_action, menu);
@@ -70,6 +73,7 @@ public class MainActivity extends ListActivity implements AbsListView.MultiChoic
         return false;
     }
 
+    // verifica qual item foi clicado comparando o seu id
     @Override
     public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
 
